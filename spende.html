@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt spenden⎪AID WEAR</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/donation-form.css"/>
+</head>
+<body>
+ <nav class="nav container">
+    <a href="index.html" class="logo-link">
+    <svg class="icon-logo">
+    <use href="sources/sprite.svg#Logo">
+    </use>
+</svg>
+</a>
+    <div class="nav-toggler"> 
+    <svg class="icon-menu icon-menu--open">
+    <use href="sources/sprite.svg#menu_open">
+    </use>
+</svg>
+<svg class="icon-menu icon-menu--close">
+    <use href="sources/sprite.svg#menu_close">
+    </use>
+</svg>
+</div>
+<ul class="list nav-list">
+    <li class="nav-items"><a href="#">Unsere Mission</a></li>
+    <li class="nav-items"><a href="#">Aktuelle Projekte</a></li>
+    <li class="nav-items"><a href="#">Team</a></li>
+    <li class="nav-items"><a href="#">Mitmachen</a></li>
+    <li class="nav-items"><a href="#">Kontakt</a></li>
+    <li><a href="spende.html" class="button">Jetzt spenden</a></li>
+</ul>
+</nav>
+
+<div class="container">
+    <div class="hero hero--text-only">
+         <div class="hero-content">
+            <h1>Jetzt spenden</h1>
+            <div class="hero-content-divider">
+            </div>
+            <p>Mit deiner Spende hilfst Du Menschen in realen Notlagen dabei, ihre Grundbedürfnisse zu erfüllen.</p>
+        </div>
+    </div>
+</div>
+
+  <form id="donation-form" class="donation-form" novalidate>
+
+  <!-- 1. Spendenziel -->
+  <section class="donation-card mb-3" id="sec-1">
+    <h2 class="donation-card-title">Spendenziel auswählen</h2>
+    <div class="d-flex flex-wrap justify-content-center donation-pill-group" role="radiogroup" aria-label="Spendenziel">
+      <input type="radio" class="btn-check" name="ziel" id="ziel-syrien" value="Syrien" checked>
+      <label class="btn donation-pill" for="ziel-syrien">Syrien</label>
+
+      <input type="radio" class="btn-check" name="ziel" id="ziel-ukraine" value="Ukraine">
+      <label class="btn donation-pill" for="ziel-ukraine">Ukraine</label>
+
+      <input type="radio" class="btn-check" name="ziel" id="ziel-togo" value="Togo">
+      <label class="btn donation-pill" for="ziel-togo">Togo</label>
+    </div>
+  </section>
+
+  <!-- 2. Kleidung -->
+  <section class="donation-card mb-3" id="sec-2">
+    <div class="row g-3 align-items-start">
+      <div class="col-12 col-md-3">
+        <h2 class="donation-card-title mb-0">Kleidung auswählen</h2>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="d-flex flex-wrap donation-pill-group" role="group" aria-label="Kleidung">
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-kleider" value="Kleider/Röcke">
+          <label class="btn donation-pill" for="k-kleider">Kleider/Röcke</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-hosen" value="Hosen">
+          <label class="btn donation-pill" for="k-hosen">Hosen</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-muetzen" value="Mützen/Handschuhe">
+          <label class="btn donation-pill" for="k-muetzen">Mützen/Handschuhe</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-tshirts" value="T-Shirts">
+          <label class="btn donation-pill" for="k-tshirts">T-Shirts</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-pullover" value="Pullover">
+          <label class="btn donation-pill" for="k-pullover">Pullover</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-hemden" value="Hemden/Blusen">
+          <label class="btn donation-pill" for="k-hemden">Hemden/Blusen</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-sport" value="Sportkleidung">
+          <label class="btn donation-pill" for="k-sport">Sportkleidung</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-unterwaesche" value="Unterwäsche/Socken">
+          <label class="btn donation-pill" for="k-unterwaesche">Unterwäsche/Socken</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-jacken" value="Jacken/Mäntel">
+          <label class="btn donation-pill" for="k-jacken">Jacken/Mäntel</label>
+
+          <input type="checkbox" class="btn-check" name="kleidung" id="k-schuhe" value="Schuhe">
+          <label class="btn donation-pill" for="k-schuhe">Schuhe</label>
+        </div>
+      </div>
+    </div>
+    <div class="donation-msg" aria-live="polite"></div>
+  </section>
+
+  <!-- 3. Übergabe -->
+  <section class="donation-card mb-3">
+    <h2 class="donation-card-title">Übergabe definieren</h2>
+    <div class="d-flex flex-wrap justify-content-center donation-pill-group" role="radiogroup" aria-label="Übergabe">
+      <input type="radio" class="btn-check" name="uebergabe" id="uebergabe-abgabe" value="Abgabe" checked>
+      <label class="btn donation-pill donation-pill-wide" for="uebergabe-abgabe">Abgabe an der<br>Geschäftsstelle</label>
+
+      <input type="radio" class="btn-check" name="uebergabe" id="uebergabe-abholung" value="Abholung">
+      <label class="btn donation-pill donation-pill-wide" for="uebergabe-abholung">Abholung durch<br>Sammelfahrzeug</label>
+    </div>
+  </section>
+
+  <!-- 4. Kontaktdaten -->
+  <section class="donation-card mb-3">
+    <h2 class="donation-card-title">Kontaktdaten angeben</h2>
+
+    <div class="row g-3 donation-fields">
+      <div class="col-12 col-md-6">
+        <label for="vorname" class="form-label">Vorname *</label>
+        <input type="text" class="form-control donation-input" id="vorname" name="vorname" autocomplete="given-name" required>
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="nachname" class="form-label">Nachname *</label>
+        <input type="text" class="form-control donation-input" id="nachname" name="nachname" autocomplete="family-name" required>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">E-Mailadresse *</label>
+        <input type="email" class="form-control donation-input" id="email" name="email" autocomplete="email" required>
+      </div>
+    </div>
+
+    <div class="donation-pickup mt-4" id="pickup">
+      <p class="donation-hint">Erforderliche Angaben für die Abholung durch ein Sammelfahrzeug</p>
+      <div class="row g-3 donation-fields">
+        <div class="col-12 col-md-8">
+          <label for="strasse" class="form-label">Straße</label>
+          <input type="text" class="form-control donation-input" id="strasse" name="strasse" autocomplete="address-line1">
+        </div>
+        <div class="col-6 col-md-4">
+          <label for="hausnr" class="form-label">Haus-Nr.</label>
+          <input type="text" class="form-control donation-input" id="hausnr" name="hausnr" pattern="\d[0-9a-zA-ZÄÖÜäöüß-]*">
+        </div>
+        <div class="col-6 col-md-3">
+          <label for="plz" class="form-label">Postleitzahl</label>
+          <input type="text" class="form-control donation-input" id="plz" name="plz" inputmode="numeric" maxlength="5" pattern="\d{5}" autocomplete="postal-code">
+        </div>
+        <div class="col-12 col-md-5">
+          <label for="ort" class="form-label">Ort</label>
+          <input type="text" class="form-control donation-input" id="ort" name="ort" autocomplete="address-level2">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="telefon" class="form-label">Telefonnummer</label>
+          <input type="tel" class="form-control donation-input" id="telefon" name="telefon" autocomplete="tel" inputmode="tel" pattern="\+?\d[\d\s-]*">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Abschluss -->
+  <section class="donation-card mb-3">
+    <h2 class="donation-card-title">Registrierung abschließen</h2>
+    <p class="donation-legal">
+      Mit dem Absenden erklärst Du dich damit einverstanden, dass wir deine Daten zur Bearbeitung der Spende verarbeiten dürfen.<br>
+      Weitere Informationen dazu findest Du in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.
+    </p>
+    <button type="submit" class="btn donation-submit">Absenden</button>
+  </section>
+
+</form>
+
+<div class="collapsible-container container">
+  <h2>Häufig gestellte Fragen</h2>
+
+<div class="collapsible">
+<header class="collapsible-header">
+  <h4 class="collapsible-heading">Was ist AID WEAR und wo ist die Organisation ansässig?</h4>
+  <svg class="icon-chevron">
+      <use href="sources/sprite.svg#chevron">
+      </use>
+  </svg>
+</header>
+<div class="collapsible-content">
+<p>AID WEAR ist ein unabhängiger Verein mit Sitz in Lippstadt. Wir sammeln gespendete Kleidung und bringen sie gezielt dorthin, wo sie im Rahmen humanitärer Hilfe benötigt wird. Dabei verbinden wir unsere lokale Arbeit in Lippstadt mit einem globalen Partnernetzwerk. Unser Ziel ist es, Kleidung schnell, transparent und ohne unnötige bürokratische Umwege Menschen in aktuellen Krisengebieten zugänglich zu machen.</p>
+</div>
+</div>
+
+<div class="collapsible">
+  <header class="collapsible-header">
+      <h4 class="collapsible-heading">Welche Kleidung kann ich spenden?</h4>
+      <svg class="icon-chevron">
+          <use href="sources/sprite.svg#chevron">
+          </use>
+      </svg>
+  </header>
+  <div class="collapsible-content">
+  <p>Bei der Registrierung wählst du die Art der Kleidung aus einer vorgegebenen Liste aus. Dadurch können wir die Spenden besser erfassen und den Transport gezielt koordinieren.</p>
+  </div>
+  </div>
+
+  <div class="collapsible">
+      <header class="collapsible-header">
+          <h4 class="collapsible-heading">Was passiert, wenn meine Abholadresse nicht im Einzugsgebiet liegt?</h4>
+          <svg class="icon-chevron">
+              <use href="sources/sprite.svg#chevron">
+              </use>
+          </svg>
+      </header>
+      <div class="collapsible-content">
+      <p>Wenn die ersten beiden Ziffern deiner Postleitzahl nicht mit denen der Geschäftsstelle übereinstimmen, kann das Sammelfahrzeug deine Spende nicht abholen. In diesem Fall kannst du deine Kleidung alternativ persönlich an der Geschäftsstelle abgeben.</p>
+      </div>
+      </div>
+
+      <div class="collapsible">
+          <header class="collapsible-header">
+              <h4 class="collapsible-heading">Wie kann ich meine Kleidung abgeben?</h4>
+              <svg class="icon-chevron">
+                  <use href="sources/sprite.svg#chevron">
+                  </use>
+              </svg>
+          </header>
+          <div class="collapsible-content">
+          <p>Du kannst deine Kleiderspende entweder persönlich an unserer Geschäftsstelle abgeben oder unser Sammelfahrzeug zur Abholung anfordern. In beiden Fällen registrierst du zunächst deine Spende über das Formular.</p>
+          </div>
+          </div>
+
+          <div class="collapsible">
+              <header class="collapsible-header">
+                  <h4 class="collapsible-heading">Was passiert nach der Registrierung meiner Kleiderspende?</h4>
+                  <svg class="icon-chevron">
+                      <use href="sources/sprite.svg#chevron">
+                      </use>
+                  </svg>
+              </header>
+              <div class="collapsible-content">
+              <p>Nach erfolgreicher Registrierung ist deine Spende erfasst. Bei einer persönlichen Übergabe kannst du die Kleidung an der Geschäftsstelle abgeben. Bei einer Abholung stimmen wir den genauen Termin telefonisch mit dir ab. Anschließend wird die Kleidung gezielt dorthin gebracht, wo sie benötigt wird.</p>
+              </div>
+              </div>
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+<div class="footer-grid">
+
+            <svg class="icon-logo">
+            <use href="sources/sprite.svg#Logo">
+            </use>
+        </svg>
+
+    <div class="footer-column footer-address">
+        <p>
+          <strong>AID WEAR e. V.</strong><br>
+          Lilienstraße 33<br>
+          59555 Lippstadt
+        </p>
+  
+        <p>
+          <strong>Öffnungszeiten:</strong><br>
+          Dienstags bis Samstag<br>
+          10.00 – 18.00 Uhr
+        </p>
+      </div> 
+
+      <nav class="footer-column" aria-label="Unterstütze uns">
+        <h3>Unterstütze uns</h3>
+        <ul>
+          <li><a href="spende.html">Spenden</a></li>
+          <li><a href="#">AID WEAR beitreten</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-column" aria-label="Lerne uns kennen">
+        <h3>Lerne uns kennen</h3>
+        <ul>
+          <li><a href="#">Unsere Mission</a></li>
+          <li><a href="#">Aktuelle Projekte</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+  
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <nav aria-label="Rechtliche Informationen">
+          <ul>
+            <li>© 2026 AIDWEAR </li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </nav>
+    </div>
+</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/donation-form.js"></script>
+
+</body>
+</html>
+

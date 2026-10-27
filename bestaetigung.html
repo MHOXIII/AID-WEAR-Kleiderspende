@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung bestätigt⎪AID WEAR</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/confirmation.css"/>
+</head>
+<body>
+
+<nav class="nav container">
+    <a href="index.html" class="logo-link">
+    <svg class="icon-logo">
+    <use href="sources/sprite.svg#Logo">
+    </use>
+</svg>
+</a>
+    <div class="nav-toggler">
+    <svg class="icon-menu icon-menu--open">
+    <use href="sources/sprite.svg#menu_open">
+    </use>
+</svg>
+<svg class="icon-menu icon-menu--close">
+    <use href="sources/sprite.svg#menu_close">
+    </use>
+</svg>
+</div>
+<ul class="list nav-list">
+    <li class="nav-items"><a href="#">Unsere Mission</a></li>
+    <li class="nav-items"><a href="#">Aktuelle Projekte</a></li>
+    <li class="nav-items"><a href="#">Team</a></li>
+    <li class="nav-items"><a href="#">Mitmachen</a></li>
+    <li class="nav-items"><a href="#">Kontakt</a></li>
+    <li><a href="spende.html" class="button">Jetzt spenden</a></li>
+</ul>
+</nav>
+
+<div class="container">
+  <div class="hero hero--text-only">
+    <div class="hero-content">
+      <h1>Jetzt spenden</h1>
+      <div class="hero-content-divider"></div>
+      <p>Mit deiner Spende hilfst Du Menschen in realen Notlagen dabei, ihre Grundbedürfnisse zu erfüllen.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container confirmation">
+  <section class="confirmation-box" id="confirmation-box" aria-live="polite">
+    <!-- wird per JavaScript aus sessionStorage befüllt -->
+  </section>
+</div>
+
+<footer class="footer">
+    <div class="container">
+<div class="footer-grid">
+
+            <svg class="icon-logo">
+            <use href="sources/sprite.svg#Logo">
+            </use>
+        </svg>
+
+    <div class="footer-column footer-address">
+        <p>
+          <strong>AID WEAR e. V.</strong><br>
+          Lilienstraße 33<br>
+          59555 Lippstadt
+        </p>
+
+        <p>
+          <strong>Öffnungszeiten:</strong><br>
+          Dienstags bis Samstag<br>
+          10.00 – 18.00 Uhr
+        </p>
+      </div>
+
+      <nav class="footer-column" aria-label="Unterstütze uns">
+        <h3>Unterstütze uns</h3>
+        <ul>
+          <li><a href="spende.html">Spenden</a></li>
+          <li><a href="#">AID WEAR beitreten</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-column" aria-label="Lerne uns kennen">
+        <h3>Lerne uns kennen</h3>
+        <ul>
+          <li><a href="#">Unsere Mission</a></li>
+          <li><a href="#">Aktuelle Projekte</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <nav aria-label="Rechtliche Informationen">
+          <ul>
+            <li>© 2026 AIDWEAR </li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </nav>
+    </div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/confirmation.js"></script>
+
+</body>
+</html>

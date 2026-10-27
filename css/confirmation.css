@@ -1,0 +1,91 @@
+.confirmation {
+  padding-bottom: 8rem;
+}
+
+/* Karte 1: Erfolgreiche Registrierung */
+.confirmation-success {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 4rem 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+/* Karte 2: Zusammenfassung der Angaben */
+.confirmation-summary {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 3.5rem 3rem;
+}
+
+.confirmation-summary h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.confirmation-list {
+  margin: 0;
+}
+
+.confirmation-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.confirmation-row:last-child {
+  border-bottom: none;
+}
+
+.confirmation-row dt {
+  font-weight: 700;
+  margin: 0;
+}
+
+.confirmation-row dd {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .9);
+}
+
+/* Hinweis, falls keine Registrierung vorliegt */
+.confirmation-empty {
+  background: #333333;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.confirmation-empty h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-empty p {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .confirmation-success {
+    padding: 3rem 2rem;
+    font-size: 2rem;
+  }
+
+  .confirmation-summary {
+    padding: 2.5rem 2rem;
+  }
+
+  .confirmation-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.6rem;
+  }
+}

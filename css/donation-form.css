@@ -1,0 +1,335 @@
+
+/* Formular */
+
+   .donation-form {
+    width: 100%;
+    max-width: calc(var(--content-max) + 2 * var(--gutter));
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  
+    box-sizing: border-box;
+  
+    font-family: "Noto Sans Display", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+  
+    padding-top: 24px;
+    padding-bottom: 24px;
+  
+    /* Verhindert, dass einzelne Elemente das Formular horizontal verbreitern. */
+    overflow-x: hidden;
+  }
+  
+  
+  /* Grid Bootstrap */
+
+  .donation-form .row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+  
+    /* Bootstrap setzt bei .row normalerweise negative Außenabstände. */
+    margin-inline: 0;
+  }
+  
+  
+/* Karten */
+  
+  .donation-card {
+    background: #333333;
+    border-radius: 20px;
+    padding: 32px 24px;
+  }
+  
+  .donation-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+  
+    margin-bottom: 24px;
+  }
+  
+  
+ 
+  /* Gruppe für Pill*/
+  
+  .donation-pill-group {
+    gap: 12px 16px;
+    min-width: 0;
+  }
+  
+  
+  /* Pill Buttons */
+  
+  .donation-form .btn.donation-pill {
+    --bs-btn-padding-y: 8px;
+    --bs-btn-padding-x: 24px;
+    --bs-btn-font-size: 16px;
+    --bs-btn-border-radius: 999px;
+  
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+  
+    font-weight: 500;
+  
+    white-space: normal;
+    min-width: 0;
+  
+    text-align: center;
+  
+    transition:
+      color .15s ease-in-out,
+      background-color .15s ease-in-out,
+      border-color .15s ease-in-out,
+      box-shadow .15s ease-in-out;
+  }
+  
+  
+
+/* Hover-Effekt für NICHT-ausgewählte Pill-Buttons */
+  
+  .donation-form .btn-check:not(:checked) + .donation-pill:hover {
+    color:#ffffff !important;
+    background-color: rgba(255, 255, 255, .12) !important;
+    border-color: #ffffff !important;
+  }
+  
+  
+  /* Ausgewählte Pill-Buttons */
+  
+  .donation-form .btn-check:checked + .donation-pill {
+    color: #020202 !important;
+    background-color: #00BAE0 !important;
+    border-color: #00BAE0 !important;
+  
+    box-shadow: none !important;
+  }
+  
+
+/* Hover-Effekt für ausgewählte Pill-Buttons */
+
+  .donation-form .btn-check:checked + .donation-pill:hover {
+    color: #020202 !important;
+    background-color: #00BAE0 !important;
+    border-color: #00BAE0 !important;
+  
+    box-shadow: none !important;
+  }
+  
+
+  /* Fokus / Bedienung Tastatur */
+  
+  .donation-form .btn-check:focus-visible + .donation-pill {
+    outline: 2px solid #00BAE0;
+    outline-offset: 2px;
+  }
+  
+  /* Bootstrap-Hintergrund unterdrücken */
+  
+  .donation-form .btn-check:focus-visible + .donation-pill:hover {
+    box-shadow: none !important;
+  }
+  
+  /* Pills Übergabe */
+  
+  .donation-form .btn.donation-pill-wide {
+    --bs-btn-border-radius: 20px;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 36px;
+  
+    line-height: 1.25;
+  
+    max-width: 260px;
+  
+    text-align: center;
+  }
+  
+  /* Formularfelder */
+  
+  .donation-input {
+    width: 100%;
+    height: 42px;
+  
+    box-sizing: border-box;
+  
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+  
+    color: #ffffff;
+  
+    padding: 10px 16px;
+  
+    font-size: 16px;
+  }
+  
+  
+  /* Fokus */
+  
+  .donation-input:focus {
+    background: transparent;
+    color: #ffffff;
+  
+    border-color: #00BAE0;
+  
+    box-shadow: 0 0 0 2px rgba(0, 186, 224, .4);
+  }
+  
+  
+  /* Platzhalter */
+  
+  .donation-input::placeholder {
+    color: rgba(255, 255, 255, .5);
+  }
+  
+  
+  /* Formular Label */
+  
+  .donation-form .form-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  
+  /* Hinweis für erforderliche Felder bei Abholung */
+  
+  .donation-hint {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  
+  
+  /* Angaben bei Abholung */
+  
+/* Im Default abgeschwächt dargestellt */
+  
+  .donation-pickup {
+    opacity: .45;
+  
+    transition: opacity .2s ease;
+  }
+  
+  
+  /* Vollständige Sichtbarkeit bei Auswahl "Abholung durch Sammelfahrzeug" */
+  
+  .donation-form:has(#uebergabe-abholung:checked) .donation-pickup {
+    opacity: 1;
+  }
+  
+  
+  /* Text zu "Registrierung abschließen" */
+  
+  .donation-legal {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .donation-legal a {
+    color: #00BAE0;
+    text-decoration: none;
+  }
+  
+  .donation-legal a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Button "Absenden" */
+  
+  .donation-form .btn.donation-submit {
+    --bs-btn-padding-y: 12px;
+    --bs-btn-padding-x: 42px;
+    --bs-btn-border-radius: 20px;
+    --bs-btn-font-size: 16px;
+  
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+  
+    font-weight: 500;
+  
+    transition:
+      color .15s ease-in-out,
+      background-color .15s ease-in-out,
+      border-color .15s ease-in-out,
+      box-shadow .15s ease-in-out;
+  }
+  
+  
+  /* Hover */
+  
+  .donation-form .btn.donation-submit:hover {
+    color: #ffffff !important;
+    background-color: #00BAE0 !important;
+    border-color: #00BAE0 !important;
+  }
+  
+  
+  /* Fokus */
+  
+  .donation-form .btn.donation-submit:focus,
+  .donation-form .btn.donation-submit:focus-visible {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border-color: #00BAE0 !important;
+  
+    box-shadow: 0 0 0 2px rgba(0, 186, 224, .4) !important;
+  }
+  
+  
+  /* Ausgabe bei Fehlern im Formular */
+  
+  .donation-card.is-invalid-card {
+    box-shadow: inset 0 0 0 2px #ff8a80;
+  }
+  
+  .donation-input.is-invalid {
+    border-color: #ff8a80;
+  }
+  
+  .donation-msg {
+    color: #ff8a80;
+    font-size: 14px;
+    margin: 12px 0 0;
+    min-height: 1em;
+  }
+
+/* Fehlermeldung direkt unter einem einzelnen Eingabefeld */
+.donation-feedback {
+  color: #ff8a80;
+  font-size: 14px;
+  margin-top: 6px;
+  min-height: 1em;
+}
+
+  
+  /* Mobile Endgeräte */
+  
+  @media (max-width: 600px) {
+  
+    .donation-card-title {
+      margin-bottom: 12px;
+    }
+  
+  }
+
+/* Korrekturen für Kollisionen mit Bootstrap (nur spende.html) */
+
+/* Bootstraps .nav setzt flex-wrap: wrap - dadurch rutscht das Menü unter das Logo.
+   Nur oberhalb des Mobil-Breakpoints aus styles.css (max-width: 1000px) zurücksetzen,
+   damit das mobile Menü unverändert funktioniert. */
+   
+   @media (min-width: 1001px) {
+    .nav {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  /* Bootstraps Reboot setzt für ul margin-top: 0 und margin-bottom: 1rem;
+     auf index.html gilt der Browser-Standard (1em oben und unten). */
+  .nav-list {
+    margin-block: 1em;
+  }
